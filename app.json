@@ -4,7 +4,7 @@
     "slug": "insectidexfluent",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/image.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -14,10 +14,19 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "plugins": [
+      "expo-camera"
+    ],
     "ios": {
+      "infoPlist": {
+        "NSCameraUsageDescription": "Allow InsectiDex to access your camera"
+      },
       "supportsTablet": true
     },
     "android": {
+      "permissions": [
+        "CAMERA"
+      ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
